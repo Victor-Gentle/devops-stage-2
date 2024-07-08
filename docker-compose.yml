@@ -17,11 +17,11 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     environment:
-      DOMAIN: localhost
+      DOMAIN: 34.227.221.85
       ENVIRONMENT: local
       PROJECT_NAME: "Full Stack FastAPI Project"
       STACK_NAME: full-stack-fastapi-project
-      BACKEND_CORS_ORIGINS: http://localhost,http://localhost:5173,https://localhost,https://localhost:5173
+      BACKEND_CORS_ORIGINS: http://34.227.221.85,http://34.227.221.85:5173,https://34.227.221.85,https://34.227.221.85:5173
       SECRET_KEY: Genvic12
       FIRST_SUPERUSER: devops@hng.tech
       FIRST_SUPERUSER_PASSWORD: devops#HNG11
