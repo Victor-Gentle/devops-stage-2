@@ -1,0 +1,22 @@
+http:
+  routers:
+    frontend:
+      entryPoints:
+        - web
+      rule: "Host(`localhost`)"
+      service: frontend
+    backend:
+      entryPoints:
+        - web
+      rule: "Host(`localhost`) && PathPrefix(`/api`, `/docs`, `/redoc`)"
+      service: backend
+
+  services:
+    frontend:
+      loadBalancer:
+        servers:
+          - url: "http://frontend:80"
+    backend:
+      loadBalancer:
+        servers:
+          - url: "http://backend:8000"
